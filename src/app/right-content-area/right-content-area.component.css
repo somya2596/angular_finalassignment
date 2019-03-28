@@ -1,0 +1,31 @@
+.content_div{
+    height: 600px;
+    width: 100%;
+}
+
+.product_div{
+    height:345px;
+    width: 30%;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.img_style{
+    height: 280px;
+    width: 100%;
+}
+
+.product_details_box{
+color: #fff;
+}
+
+.product_div:hover{
+    background-color:black;
+    color: aliceblue;
+}
+
+.product_details{
+    padding-left:20px; 
+}

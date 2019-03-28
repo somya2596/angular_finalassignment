@@ -1,0 +1,141 @@
+body{
+
+    letter-spacing: 1px;
+}
+.header_right{
+    background-color:#282b30;
+}
+
+.main_header{
+
+}
+
+.img_sty{
+    margin-top: 0;
+    width: 107px;
+    height: 14px;
+}
+
+.header_left{
+    background-color: skyblue;
+
+}
+
+.header_text{
+    color: white;
+    padding-left: 35%;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav > li.dropdown:hover > a, 
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+    background-color: rgb(231, 231, 231);
+    color: rgb(85, 85, 85);
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    margin-top: 72px;
+}
+
+.nav1{
+    margin-bottom: 1px;
+    background-color: #fff;
+    
+}
+
+.content-view{
+    height: 500px;
+    
+}
+
+.content-view-right{
+
+    height:1350px;
+}
+
+.content-view-left{
+    height: 1350px;
+
+}
+
+.sticky_bar{
+    height: 20px;
+}
+
+.options{
+    margin-top: 2px;
+}
+
+.thumbnail:hover .overlay{
+    opacity: 1;
+   }
+   .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 20px;
+  padding-top: 6px;
+  height: 100%;
+  width: 95%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.button_style{
+    width: 180px;
+    margin-bottom: 5px;
+}
+
+.sticky_bar{
+    width: 100%;
+    height: 40px;
+    position: sticky;
+    overflow: hidden;
+    display: block;
+    background-color:crimson;
+    top: 190 ;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.footer_style{
+    background-color: black;
+    height: 1000px;
+    margin-top:7px;
+    overflow: hidden;
+}
+
+.sticky {
+    position: sticky;
+    top: 70px;
+    background-color: white;
+    padding: 10px;
+    font-size: 14px;
+    }
+    .fix{
+      margin-left: 40px;
+      background-color: white;
+      position:sticky;
+     
+      
+  }
+  
+  .fix2{
+      margin-left:900px;
+      width: 100px;
+      height: 30px;
+      background-color: #fff;
+      border:none;
+  }
+
+  .fix2:hover{
+      background-color: grey;
+  }

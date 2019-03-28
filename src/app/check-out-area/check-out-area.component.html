@@ -1,0 +1,63 @@
+<div style="margin-top:55px;">
+<div class="row">
+<div class="col-sm-12 new_arrival_style">
+<a href="/">
+    <h3>
+      <i class='fa fa-arrow-left' style='font-size:24px'></i> New Arrival</h3>
+  </a>
+</div>
+</div>
+  <div class="row " style="margin-top:7px;">
+    <div class="col-sm-4">
+      <img id="firstimg" src="../../assets/Images/1.jpg" alt="">
+    </div>
+    <div class="col-sm-4">
+      <img id="secondimg" src="../../assets/Images/2.jpg" alt="">
+    </div>
+    <div class="col-sm-4">
+      <h3 id="prodname" style="display: inline">
+        <b> &nbsp;&nbsp;&nbsp;Product Name</b>
+      </h3>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fa fa-inr"></i> Rupees </p>
+      <br>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>COLOR: Sample Color</b>
+      </p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="dot"></span>
+      <br>
+      <br>
+      <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Size</b>
+      </p>
+      &nbsp;&nbsp;&nbsp;
+      <span>
+        <button type="button" id="sizebtn" (ngSubmit)="productsized()"> XS </button>&nbsp;&nbsp;&nbsp;
+        <button type="button" id="sizebtn" (ngSubmit)="productsized()"> S </button>&nbsp;&nbsp;&nbsp;
+        <button type="button" id="sizebtn" (ngSubmit)="productsized()"> M </button>&nbsp;&nbsp;&nbsp;
+        <button type="button" id="sizebtn" (ngSubmit)="productsized()"> L </button>&nbsp;&nbsp;&nbsp;
+        <button type="button" id="sizebtn" (ngSubmit)="productsized()"> XL </button>
+      </span>
+      <p style="font-size: 10px; margin-left: 20px">
+        <br>In addition to our size guide, we’d recommend that you see the Size & Fit information below before choosing your size.</p>
+      <br>
+      <br>
+      <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Quantity</b>
+      </p>
+      <br>
+      <span> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="cartbtn" [disabled]="!productsize">
+          Add To Cart
+        </button>
+      </span>
+    </div>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i>Free shipping on orders above ₹ 5,000</i>
+    </p>
+  </div>
+</div>

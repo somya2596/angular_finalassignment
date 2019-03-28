@@ -1,0 +1,14 @@
+<div class="content_div">
+  <div *ngFor="let product of products">
+    <a href="/check-out-area">
+    <div class="product_div" id="{{product.id}}">
+      <img src="{{product.img}}" class="img_style">
+      <div class="product_details_box">
+        <div class="product_details">Color: {{product.color}}</div>
+        <div class="product_details">Size: {{product.size}}</div>
+        <div class="product_details">Price: {{product.price}}</div>
+      </div>
+    </div>
+  </a>
+  </div>
+</div>

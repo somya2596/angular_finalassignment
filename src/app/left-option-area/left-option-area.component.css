@@ -1,0 +1,15 @@
+.side-menu{
+    margin-left: 40px;
+}
+a{
+    color: black;
+    font-size: 12px;
+    padding-left: 15px;
+    line-height: 25px;
+}
+label{
+    font-size: 14px;
+}
+li{
+    font-size: 14px;
+}
