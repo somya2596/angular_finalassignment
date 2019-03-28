@@ -1,0 +1,25 @@
+<div class="col-sm-9">
+    <div *ngFor="let product of property" class="col-sm-6 col-md-4">
+  <div ><img [src]="product.imageurl" class="img"/><br>
+    <h3>{{product.BuildingName}}</h3>
+    <ul>
+     <li><h4>Rs. {{product.Price}}</h4></li>
+     <li> <h4> {{product.FlatType}}</h4></li>
+     <li><h4>ready to move</h4></li>
+     <li><h4>{{product.Location}}</h4></li></ul>
+    <button routerLink="/cart" routerLinkActive="active">GET DETAILS</button>
+    
+    <button class="btnheart btn btn-default" style="margin-top:10px;"type="submit">
+      <i class="abc glyphicon glyphicon-heart"></i>
+    </button>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
