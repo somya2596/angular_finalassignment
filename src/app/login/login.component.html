@@ -1,0 +1,49 @@
+<div class="form-group">
+
+
+
+
+
+
+
+  <label for="username">UserName</label>
+
+  <input type="text" name="username" value="" class="form-control" ngModel  #username='ngModel' required
+  
+  pattern="/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/">
+
+
+
+  <div   *ngIf="username.touched"   class="alert alert-danger">
+
+
+<div *ngIf="username.errors?.required">
+
+  username is required
+
+
+
+</div>
+
+<div *ngIf="username.errors?.pattern">
+Username is invalid
+
+
+</div>
+
+
+
+
+<div>
+
+
+  
+</div>
+
+
+
+
+
+
+  </div>
+</div>
