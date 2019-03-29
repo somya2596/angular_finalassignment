@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
         this.user.push(data[key])
       });
     });
+
+    this.autheticationservice.logout();
     
     
   }
@@ -35,7 +37,8 @@ export class LoginComponent implements OnInit {
      {
        console.log("Login Success");
        
-
+       localStorage.setItem('isLoggedIn', "true");
+       localStorage.setItem('token', loginform.value.username);
        
        this.router.navigate(['/dashboard'])
      }

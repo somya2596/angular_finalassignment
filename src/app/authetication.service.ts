@@ -22,8 +22,10 @@ export class AutheticationService {
   console.log(userdata);
     return this.http.post<Users[]>(this._url,userdata);
   }
+
   logout(): void {
     localStorage.setItem('isLoggedIn', "false");
     localStorage.removeItem('token');
   } 
+  
 }
