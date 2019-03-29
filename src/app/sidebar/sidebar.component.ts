@@ -36,7 +36,6 @@ export class SidebarComponent implements OnInit {
 
     this.filterData[key] = val;
      console.log(key,val);
-     console.log("here",this.filterData);
      this.jsonService.getproperty().subscribe(data=>{
       this.jsonService.setData(this.filterData, data);
     });

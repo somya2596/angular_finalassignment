@@ -6,7 +6,6 @@ import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { BodyComponent } from './body/body.component';
 import { HeroComponent } from './hero/hero.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
@@ -17,7 +16,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BodyComponent,
     HeroComponent,
     SidebarComponent,
     routingComponents

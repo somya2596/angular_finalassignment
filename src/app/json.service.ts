@@ -15,6 +15,15 @@ export class JsonService {
   getproperty():Observable<any>{
    return this.http.get("https://fir-project-97abf.firebaseio.com/.json");
   }
+  getpropertydetailsbyid(id, data){
+    let res=null;
+    data.forEach(element => {
+      if(element.id==id){
+        res=element;
+      }
+    });
+   return res;
+  }
 
   setData(filterData, data) {
     data = data.filter((tempData) => {

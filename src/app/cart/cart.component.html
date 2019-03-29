@@ -1,4 +1,29 @@
+<h1>More Details</h1>
+<div>
+  <img height="30%" width="30%" src="{{product.imageurl}}" alt="...">
+</div>
+<div class="info">
+<div class="caption">
+    <h3>{{product.BuildingName}}</h3>
+ </div>
+<ul>
+ <li><label >Owner:</label><span>{{product.Owner}}</span></li>
+ <li><label >Price:</label><span>{{product.Price}}</span></li>
+ <li><label >Location:</label><span>{{product.Location}}</span></li>
+ <li><label >Flattype:</label><span>{{product.FlatType}}</span></li>
+ <li><label >Floor:</label><span>{{product.floor}}</span></li>
+ <li><label >superarea:</label><span>{{product.superarea}}</span></li>
+ <li><label >carpetarea:</label><span>{{product.carpetarea}}</span></li>
+ <li><label>facing:</label><span>{{product.facing}}</span></li>
+ <li><label>furnished:</label><span>{{product.furnished}}</span></li>
+ <li><label>propertytype:</label><span>{{product.propertytype}}</span></li>
+ </ul>
+</div>
+<div class="buy"><span>
+ <input class="btn btn-success" type="button" ng-click="addItemToCart(product)" value="Buy" (click)="onBuy()">
+</span>
+<button class="carttt btn btn-success" routerLink="/body" routerLinkActive="active">Back
+</button>
+</div>
 
-<p>
-  cart works!
-</p>
+
