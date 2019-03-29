@@ -1,38 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms'
+import { RouterModule, Routes, RoutesRecognized } from '@angular/router';
+import { AuthGuard } from './auth.guard';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeroareaComponent } from './heroarea/heroarea.component';
-import { LeftOptionAreaComponent } from './left-option-area/left-option-area.component';
-import { RightContentAreaComponent } from './right-content-area/right-content-area.component';
-import { CheckOutAreaComponent } from './check-out-area/check-out-area.component';
-import { BodycomponentComponent } from './bodycomponent/bodycomponent.component';
-import { Routes, RouterModule } from '@angular/router';
-import { areIterablesEqual } from '@angular/core/src/change_detection/change_detection_util';
+import { LoginComponent } from './login/login.component';
+import { AutheticationService } from './authetication.service';
+import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
-  { path: '', component: BodycomponentComponent },
-  { path: 'check-out-area', component: CheckOutAreaComponent }
-]
+  { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HeroareaComponent,
-    LeftOptionAreaComponent,
-    RightContentAreaComponent,
-    CheckOutAreaComponent,
-    BodycomponentComponent
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
+   
+    
   ],
-  providers: [],
+  providers: [AutheticationService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
