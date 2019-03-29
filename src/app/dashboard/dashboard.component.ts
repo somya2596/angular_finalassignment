@@ -9,9 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+ 
+
 
   id: string;
-  constructor(private router: Router,public authteticationservice: AutheticationService) { }
+  constructor(private router: Router,private authteticationservice: AutheticationService) { }
 
   ngOnInit() {
     this.id = localStorage.getItem('token');

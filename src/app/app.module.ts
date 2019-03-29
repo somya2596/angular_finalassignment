@@ -4,12 +4,18 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms'
 import { RouterModule, Routes, RoutesRecognized } from '@angular/router';
 import { AuthGuard } from './auth.guard';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AutheticationService } from './authetication.service';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { HeroComponent } from './hero/hero.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { BodyComponent } from './body/body.component';
+import { CartComponent } from './cart/cart.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -22,7 +28,14 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent,
+    HeroComponent,
+    SidebarComponent,
+    BodyComponent,
+    CartComponent,
+    routingComponents,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

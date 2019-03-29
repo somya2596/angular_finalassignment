@@ -1,0 +1,31 @@
+<div class="col-sm-3">
+
+  <div class="dropdown">
+     <button (click)="myFunction1()" class="dropbtn">+ Type</button>
+     <div id="myDropdown1" class="dropdown-content">
+     <ul>
+
+       <li><button class="categ" (click) = "filterr('propertytype','residential')">Residential</button></li>
+      <li><button class="categ"(click) = "filterr('propertytype','commercial')">Commercial</button></li>
+   
+      </ul>
+     </div>
+   </div> 
+   
+ <hr width="60%">
+ <div class="dropdown">
+     <button (click)="myFunction2()" class="dropbtn">+ Location</button>
+     <div id="myDropdown2" class="dropdown-content">
+     <ul>
+
+       <li><button class="categ" (click) = "filterr('Location','delhi')">delhi</button></li>
+      <li><button class="categ"(click) = "filterr('Location','Gurgaon')">gurgaon</button></li>
+      <li><button class="categ"(click) = "filterr('Location','greater noida')">greater noida</button></li>
+     <li> <button class="categ"(click) = "filterr('Location','noida')">noida</button></li>
+     
+      </ul>
+     </div>
+   </div>
+
+ 
+ </div>
