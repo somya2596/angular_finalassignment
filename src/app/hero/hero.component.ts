@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
   
-  url="../../assets/hero.jpg";
+  url="../../assets/1.jpg";
+  url1="../../assets/hero.jpg";
+  url2="../../assets/1.jpg";
+  
   
   constructor() { }
 

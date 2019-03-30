@@ -1,5 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { MessagingService } from './messaging.service';
+import { environment } from '../environments/environment';
+import { AsyncPipe } from '../../node_modules/@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms'
 import { RouterModule, Routes, RoutesRecognized } from '@angular/router';
@@ -16,6 +23,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BodyComponent } from './body/body.component';
 import { CartComponent } from './cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
+import { SellComponent } from './sell/sell.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -35,18 +43,23 @@ const appRoutes: Routes = [
     BodyComponent,
     CartComponent,
     routingComponents,
-    FooterComponent
+    FooterComponent,
+    SellComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireMessagingModule,
+    AngularFireModule.initializeApp(environment.firebase)
    
     
   ],
-  providers: [AutheticationService, AuthGuard],
+  providers: [AutheticationService, MessagingService, AsyncPipe, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

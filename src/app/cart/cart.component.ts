@@ -11,16 +11,23 @@ export class CartComponent implements OnInit {
   product: any;
   public property:any;
 
+  disableButton;
+
+
+
 
   constructor(private datafetch:AutheticationService, private router:Router, private jsonService : AutheticationService) {
     const url=window.location;
     const word=url.toString().split('/');
     const id=word[word.length-1];
     this.jsonService.getproperty().subscribe(data=>{
-      this.property=data;
-      console.log(this.property)
+      this.property= Object.keys(data).map((x)=>{return data[x]});
+      console.log(this.property);
       this.product = this.jsonService.getpropertydetailsbyid(id,this.property);
-      });
+     
+      
+    });
+     
   
  
 
@@ -31,6 +38,9 @@ export class CartComponent implements OnInit {
   }
   onBuy(){
     window.alert("Property Purchased");
+   
+      this.disableButton = true;
+      
   }
 
 }
