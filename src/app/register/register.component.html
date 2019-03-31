@@ -70,9 +70,12 @@
 
     </div>
     <div class="form-group">
-      <button class="btn btn-block btn-primary" type="submit" id="register">REGISTER</button>
+      <button class="btn btn-block btn-primary" type="submit" id="register" [disabled] = "signupform.invalid">REGISTER</button>
       <p class="message">Already registered? <a routerLink="/login" routerLinkActive="active">Log In</a></p>
     </div>
 
   </div>
 </form>
+<div class="warning">
+  {{warn}}
+</div>

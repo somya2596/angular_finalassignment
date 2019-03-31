@@ -1,0 +1,35 @@
+.back{
+    margin-left:100px;
+    font-size: 14px;
+    color: white;
+}
+/* li{
+    margin-left: 30px;
+} */
+.info {
+    margin-top: 7%;
+}
+.buy {
+    margin-right: 21.6%;
+}
+.features {
+    margin-bottom: 5%;
+    margin-left: 10%;
+    font-size: 17px;
+}
+h2 {
+    text-align: center;
+}
+.buttons {
+    margin-left: 16%;
+    
+}
+label {
+    margin-right: 8px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: oblique;
+}

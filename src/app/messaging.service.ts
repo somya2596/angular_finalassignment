@@ -4,7 +4,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireMessaging } from '@angular/fire/messaging';
 import { mergeMapTo } from 'rxjs/operators';
 import { take } from 'rxjs/operators';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs'
 
 @Injectable()
 export class MessagingService {
@@ -44,7 +44,6 @@ export class MessagingService {
    * 
    * @param userId userId
    */
-  
   requestPermission(userId) {
     this.angularFireMessaging.requestToken.subscribe(
       (token) => {

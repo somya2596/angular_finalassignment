@@ -24,19 +24,19 @@ export class RegisterComponent implements OnInit {
       });
     });
   }
-
+public warn: String;
   onSubmit(signupform :NgForm)
   { 
     this.user.forEach((key) => {
       if(signupform.value.username === key.username)
       {
-        window.alert("User Already Exists");
+        this.warn = "User Already Exists";
         this.flag = false;
       }
     });
 
     if(this.flag){
-   
+   signupform.value.password = btoa(signupform.value.password)
     this.autheticationservice.setUser(signupform.value).subscribe((res)=>
     {
       // console.log(res);

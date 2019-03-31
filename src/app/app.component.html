@@ -1,7 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
-Current Message:
-<h1>{{(message|async)?.notifications.title}}</h1>
-<p>{{(message|async)?.notification.body}}</p>
-
-  {{ message | async | json }}
-
+<!-- {{ message | async | json }} -->
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
