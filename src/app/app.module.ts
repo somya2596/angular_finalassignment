@@ -24,6 +24,7 @@ import { BodyComponent } from './body/body.component';
 import { CartComponent } from './cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
 import { SellComponent } from './sell/sell.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -55,7 +56,8 @@ const appRoutes: Routes = [
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireMessagingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
    
     
   ],

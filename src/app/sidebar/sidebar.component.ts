@@ -23,7 +23,6 @@ export class SidebarComponent implements OnInit {
   myFunction1() {
     document.getElementById("myDropdown1").classList.toggle("show");
   }
-  
   myFunction2() {
     document.getElementById("myDropdown2").classList.toggle("show");
   }
