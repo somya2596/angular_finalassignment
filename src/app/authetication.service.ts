@@ -16,7 +16,7 @@ export class AutheticationService {
 
   private _url: string = "https://detailform-6dced.firebaseio.com/detailForm.json";
 
-  private listurl = "https://fir-project-97abf.firebaseio.com/.json";
+  private listurl = "https://practice-5e705.firebaseio.com/.json";
 
 
   constructor(private http: HttpClient) { }

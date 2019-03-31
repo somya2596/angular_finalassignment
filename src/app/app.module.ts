@@ -25,6 +25,7 @@ import { CartComponent } from './cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
 import { SellComponent } from './sell/sell.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FavouriteComponent } from './favourite/favourite.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     CartComponent,
     routingComponents,
     FooterComponent,
-    SellComponent
+    SellComponent,
+    FavouriteComponent
   ],
   imports: [
     BrowserModule,

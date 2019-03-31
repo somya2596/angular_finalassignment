@@ -13,7 +13,11 @@ export class JsonService {
 
   constructor(private http: HttpClient) { }
   getproperty():Observable<any>{
-   return this.http.get("https://fir-project-97abf.firebaseio.com/.json");
+   return this.http.get("https://practice-5e705.firebaseio.com/.json");
+  }
+
+  update(i,value):Observable<any>{
+    return this.http.patch("https://practice-5e705.firebaseio.com/" + i + "/.json", value)
   }
   getpropertydetailsbyid(id, data){
     let res=null;
