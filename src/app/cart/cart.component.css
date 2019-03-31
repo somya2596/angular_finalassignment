@@ -1,5 +1,5 @@
-.carttt{
-    margin-left:280px;
+.back{
+    margin-left:100px;
     font-size: 14px;
     color: white;
 }
@@ -7,8 +7,29 @@
     margin-left: 30px;
 } */
 .info {
-    margin-left: 25%;
+    margin-top: 7%;
 }
 .buy {
-    margin-left: 27%;
+    margin-right: 21.6%;
+}
+.features {
+    margin-bottom: 5%;
+    margin-left: 10%;
+    font-size: 17px;
+}
+h2 {
+    text-align: center;
+}
+.buttons {
+    margin-left: 16%;
+    
+}
+label {
+    margin-right: 8px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: oblique;
 }

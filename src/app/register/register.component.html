@@ -1,0 +1,81 @@
+<form #signupform="ngForm" (ngSubmit)="onSubmit(signupform)">
+  <!-- <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="employeeService..$key"> -->
+
+
+  <div id="register-page">
+
+    <div class="form-group">
+      <!-- <label>
+        FirstName:
+      </label> -->
+      <input type="text" required [class.is-invalid]="fname.invalid && fname.touched" class="form-control" name="fname "
+        #fname="ngModel" [(ngModel)]="user.fname" placeholder="First Name">
+      <div *ngIf="fname.errors && (fname.invalid && fname.touched)">
+
+        <small class="text-danger" *ngIf="fname.errors.required">First Name is required</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- <label>
+        LastName:
+      </label> -->
+      <input type="text" required [class.is-invalid]="lname.invalid && lname.touched" class="form-control" name="lname "
+        #lname="ngModel" [(ngModel)]="user.lname" placeholder="Last Name">
+        <div *ngIf="lname.errors && (lname.invalid && lname.touched)">
+
+          <small class="text-danger" *ngIf="lname.errors.required">Last Name is required</small>
+        </div>
+    </div>
+    <div class="form-group">
+      <!-- <label>
+        Contact Number:
+      </label> -->
+      <input type="text" #phone="ngModel" pattern="^\d{10}$" required
+      [class.is-invalid]="phone.invalid && phone.touched" class="form-control" name="cno" ngModel
+      placeholder="Contact Number">
+    <div *ngIf="phone.errors && (phone.invalid && phone.touched)">
+
+      <small class="text-danger" *ngIf="phone.errors.required">Contact Number is required</small>
+      <small class="text-danger" *ngIf="phone.errors.pattern">Contact Number must be of 10 digits only.</small>
+    </div>
+    </div>
+    <div class="form-group">
+      <!-- <label>
+        UserName:
+      </label> -->
+      <input type="text" #name="ngModel" pattern="^\w.+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$" required
+        [class.is-invalid]="name.invalid && name.touched" class="form-control" name="username" ngModel
+        placeholder="ex:abc@gmail.com">
+      <div *ngIf="name.errors && (name.invalid && name.touched)">
+
+        <small class="text-danger" *ngIf="name.errors.required">Username is required</small>
+        <small class="text-danger" *ngIf="name.errors.pattern">check Username syntax</small>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <!-- <label>
+        Password:
+      </label> -->
+      <input type="{{type}}" #pass="ngModel" pattern="^([a-zA-Z0-9@*#]{8,15})$" required
+        [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" ngModel
+        placeholder="Password">
+      <span class="pwd glyphicon glyphicon-eye-open" (click)="showPass()"></span>
+      <div *ngIf="pass.errors && (pass.invalid && pass.touched)">
+
+        <small class="text-danger" *ngIf="pass.errors.required">Password is required</small>
+        <small class="text-danger" *ngIf="pass.errors.pattern">Password must consists of at least 8 characters and not
+          more than 15 characters and it can have '@,*,#' these special characters only. </small>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <button class="btn btn-block btn-primary" type="submit" id="register" [disabled] = "signupform.invalid">REGISTER</button>
+      <p class="message">Already registered? <a routerLink="/login" routerLinkActive="active">Log In</a></p>
+    </div>
+
+  </div>
+</form>
+<div class="warning">
+  {{warn}}
+</div>

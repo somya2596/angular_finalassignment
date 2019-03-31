@@ -1,0 +1,29 @@
+#sell-page {
+    width: 360px;
+    padding:4% 0 0;
+    margin: auto;
+} 
+.message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 15px;
+    text-align: center;
+  }
+.message a {
+    color: rgb(3, 165, 230);
+    text-decoration: none;
+  }
+
+  .pwd{
+    float: right;
+    margin-top: -26px;
+    margin-right: 22px;
+  }
+
+  .warning {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: red;
+    font-size: 15px;
+  }

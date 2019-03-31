@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {JsonService} from '../json.service'
+import { AutheticationService } from '../authetication.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-body',
@@ -11,10 +10,10 @@ import { Router } from '@angular/router';
 export class BodyComponent implements OnInit {
 
 
-  public property;
- constructor(private _jsonservice:JsonService,private router:Router) { 
+  public propertylist;
+ constructor(private _jsonservice:AutheticationService,private router:Router) { 
    this._jsonservice.changeData.subscribe(data => {
-   this.property = data;
+   this.propertylist = data;
    console.log(data);
   });}
   navigate(){
@@ -23,8 +22,9 @@ export class BodyComponent implements OnInit {
 
   ngOnInit(){
     this._jsonservice.getproperty().subscribe(data=>{
-      this.property=data;
-      console.log(this.property);
+      this.propertylist= Object.keys(data).map((x)=>{return data[x]});
+      console.log(this.propertylist);
+      
       
     });
    

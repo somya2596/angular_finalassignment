@@ -1,0 +1,38 @@
+<form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+
+    <div id="login-page">
+      <div class="form-group">
+        <label>
+          UserName:
+        </label>
+        <input type="text"  #name="ngModel" pattern="^\w.+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$" required [class.is-invalid]="name.invalid && name.touched" class="form-control" name="username" ngModel placeholder="ex:abc@gmail.com">
+       <div *ngIf="name.errors && (name.invalid && name.touched)">
+       
+        <small class="text-danger" *ngIf="name.errors.required">Username is required</small>
+        <small class="text-danger" *ngIf="name.errors.pattern">check Username syntax</small>
+        </div>
+      
+      </div>
+      <div class="form-group">
+        <label>
+          Password:
+        </label>
+        <input type="{{type}}" #pass="ngModel" pattern="^([a-zA-Z0-9@*#]{8,15})$" required [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" ngModel placeholder="Password">
+        <span class="pwd glyphicon glyphicon-eye-open" (click)="showPass()"></span>
+        <div *ngIf="pass.errors && (pass.invalid && pass.touched)">
+       
+          <small class="text-danger" *ngIf="pass.errors.required">Password is required</small>
+          <!-- <small class="text-danger" *ngIf="pass.errors.pattern">check Password syntax</small> -->
+          </div>
+
+      </div>
+  
+      <div class="form-group">
+        <button class="btn btn-block btn-primary" type="submit" [disabled] = "loginform.invalid">LOGIN</button>
+        <p class="message">Not registered? <a routerLink="/Signup"  routerLinkActive="active">Create an account</a></p>
+      </div>
+    </div>
+  </form>
+  <div class="warning">
+    {{warn}}
+  </div>

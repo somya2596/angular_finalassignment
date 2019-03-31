@@ -7,10 +7,10 @@
     margin-left: 300px;
 }
   .btnheart{
-      margin-left: 140px;
+      /* margin-left: 140px; */
       border:0;
     
-  }
+  } 
   .abc{
       font-size: 20px;
       margin-top: -25px;
@@ -20,4 +20,12 @@
   }
   .bodyy{
       margin-bottom: 20px;
+  }
+  .btnSpacing {
+
+    margin-right: 43%;
+
+  }
+  h2 {
+      text-align: center;
   }
