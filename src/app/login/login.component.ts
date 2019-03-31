@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   public user = [];
   show = false;
   type = "password";
+  public warn : String;
   
   constructor(private autheticationservice: AutheticationService, private router: Router) { }
 
@@ -33,14 +34,18 @@ export class LoginComponent implements OnInit {
 
   onSubmit(loginform: NgForm) {
     this.user.forEach((key) => {
-     if(loginform.value.username===key.username && loginform.value.password===key.password)
+     if(loginform.value.username===key.username && loginform.value.password===atob(key.password))
      {
-       console.log("Login Success");
+       console.warn("Login Success");
        
        localStorage.setItem('isLoggedIn', "true");
        localStorage.setItem('token', loginform.value.username);
        
        this.router.navigate(['/dashboard'])
+     }
+     else{
+       this.warn = "Incorrect Username or Password";
+       
      }
      
     });

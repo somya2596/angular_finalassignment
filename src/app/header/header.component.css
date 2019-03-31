@@ -1,0 +1,13 @@
+#right-nav, #left-nav {
+    padding-right: 4px
+}
+label {
+    font-size: 15px
+}
+.navbar-brand {
+    font-size: 24px
+}
+
+/* .navbar {
+    padding-bottom: 15px;
+} */
