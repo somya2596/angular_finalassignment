@@ -1,0 +1,8 @@
+<h1>my wishlist</h1>
+<button class="back btn btn-success" routerLink="/dashboard" routerLinkActive="active">Back
+</button>
+<div *ngFor="let liked of likedlist">
+  <img height="300cm" width="35%" src="{{liked.imageurl}}" alt="...">
+  <h2><u>{{liked.BuildingName}}</u></h2>
+  <hr>
+</div>
