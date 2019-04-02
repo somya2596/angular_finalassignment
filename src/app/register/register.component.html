@@ -9,7 +9,7 @@
         FirstName:
       </label> -->
       <input type="text" required [class.is-invalid]="fname.invalid && fname.touched" class="form-control" name="fname "
-        #fname="ngModel" [(ngModel)]="user.fname" placeholder="First Name">
+        #fname="ngModel" ngModel placeholder="First Name">
       <div *ngIf="fname.errors && (fname.invalid && fname.touched)">
 
         <small class="text-danger" *ngIf="fname.errors.required">First Name is required</small>
@@ -20,7 +20,7 @@
         LastName:
       </label> -->
       <input type="text" required [class.is-invalid]="lname.invalid && lname.touched" class="form-control" name="lname "
-        #lname="ngModel" [(ngModel)]="user.lname" placeholder="Last Name">
+        #lname="ngModel" ngModel placeholder="Last Name">
         <div *ngIf="lname.errors && (lname.invalid && lname.touched)">
 
           <small class="text-danger" *ngIf="lname.errors.required">Last Name is required</small>

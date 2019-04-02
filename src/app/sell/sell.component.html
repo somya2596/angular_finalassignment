@@ -7,7 +7,7 @@
     <div class="form-group">
 
       <input type="text" #BuildingName="ngModel" required [class.is-invalid]="BuildingName.invalid && BuildingName.touched"
-       class="form-control" name="BuildingName"  [(ngModel)]="property.BuildingName" placeholder="Building Name">
+       class="form-control" name="BuildingName"  ngModel placeholder="Building Name">
       <div *ngIf="BuildingName.errors && (BuildingName.invalid && BuildingName.touched)">
 
         <small class="text-danger" *ngIf="BuildingName.errors.required">Building Name is required</small>
@@ -17,7 +17,7 @@
     <div class="form-group">
 
       <input type="text" #FlatType="ngModel" required [class.is-invalid]="FlatType.invalid && FlatType.touched"
-        class="form-control" name="FlatType" [(ngModel)]="property.FlatType" placeholder="Flat Type">
+        class="form-control" name="FlatType" ngModel placeholder="Flat Type">
       <div *ngIf="FlatType.errors && (FlatType.invalid && FlatType.touched)">
 
         <small class="text-danger" *ngIf="FlatType.errors.required">Last Flat Type is required</small>
@@ -26,7 +26,7 @@
     <div class="form-group">
 
       <input type="text" #Location="ngModel" required [class.is-invalid]="Location.invalid && Location.touched"
-        class="form-control" name="Location" [(ngModel)]="property.Location" placeholder="Location">
+        class="form-control" name="Location" ngModel placeholder="Location">
       <div *ngIf="Location.errors && (Location.invalid && Location.touched)">
 
         <small class="text-danger" *ngIf="Location.errors.required">Location is required</small>
@@ -36,7 +36,7 @@
     <div class="form-group">
 
       <input type="text" #Owner="ngModel" required [class.is-invalid]="Owner.invalid && Owner.touched"
-        class="form-control" name="Owner" [(ngModel)]="property.Owner" placeholder="Owner">
+        class="form-control" name="Owner" ngModel placeholder="Owner">
       <div *ngIf="Owner.errors && (Owner.invalid && Owner.touched)">
 
         <small class="text-danger" *ngIf="Owner.errors.required">Owner is required</small>
@@ -47,7 +47,7 @@
     <div class="form-group">
 
       <input type="text" #Price="ngModel" required [class.is-invalid]="Price.invalid && Price.touched"
-        class="form-control" name="Price" [(ngModel)]="property.Price" placeholder="Price">
+        class="form-control" name="Price" ngModel placeholder="Price">
 
       <div *ngIf="Price.errors && (Price.invalid && Price.touched)">
 
@@ -60,7 +60,7 @@
     <div class="form-group">
 
       <input type="text" #carpetarea="ngModel" required [class.is-invalid]="carpetarea.invalid && carpetarea.touched"
-        class="form-control" name="carpetarea" [(ngModel)]="property.carpetarea" placeholder="Carpet Area">
+        class="form-control" name="carpetarea" ngModel placeholder="Carpet Area">
 
       <div *ngIf="carpetarea.errors && (carpetarea.invalid && carpetarea.touched)">
 
@@ -73,7 +73,7 @@
     <div class="form-group">
 
       <input type="text" #facing="ngModel" required [class.is-invalid]="facing.invalid && facing.touched"
-        class="form-control" name="facing" [(ngModel)]="property.facing" placeholder="Facing">
+        class="form-control" name="facing" ngModel placeholder="Facing">
 
       <div *ngIf="facing.errors && (facing.invalid && facing.touched)">
 
@@ -86,7 +86,7 @@
     <div class="form-group">
 
       <input type="text" #floor="ngModel" required [class.is-invalid]="floor.invalid && floor.touched"
-        class="form-control" name="floor" [(ngModel)]="property.floor" placeholder="Floor">
+        class="form-control" name="floor" ngModel placeholder="Floor">
 
       <div *ngIf="floor.errors && (floor.invalid && floor.touched)">
 
@@ -99,7 +99,7 @@
     <div class="form-group">
 
       <input type="text" #furnished="ngModel" required [class.is-invalid]="furnished.invalid && furnished.touched"
-        class="form-control" name="furnished" [(ngModel)]="property.furnished" placeholder="Furnished">
+        class="form-control" name="furnished" ngModel placeholder="Furnished">
 
       <div *ngIf="furnished.errors && (furnished.invalid && furnished.touched)">
 
@@ -112,7 +112,7 @@
     <div class="form-group">
 
       <input type="text" #id="ngModel" required [class.is-invalid]="id.invalid && id.touched"
-        class="form-control" name="id" [(ngModel)]="property.id" placeholder="Property Id">
+        class="form-control" name="id" ngModel placeholder="Property Id">
 
       <div *ngIf="id.errors && (id.invalid && id.touched)">
 
@@ -125,7 +125,7 @@
     <div class="form-group">
 
       <input type="text" #imageurl="ngModel" required [class.is-invalid]="imageurl.invalid && imageurl.touched"
-        class="form-control" name="imageurl" [(ngModel)]="property.imageurl" placeholder="Image URL">
+        class="form-control" name="imageurl" ngModel placeholder="Image URL">
 
       <div *ngIf="imageurl.errors && (imageurl.invalid && imageurl.touched)">
 
@@ -139,7 +139,7 @@
 
       <input type="text" #propertytype="ngModel" required
         [class.is-invalid]="propertytype.invalid && propertytype.touched" class="form-control" name="propertytype"
-        [(ngModel)]="property.propertytype" placeholder="Property Type">
+        ngModel placeholder="Property Type">
 
       <div *ngIf="propertytype.errors && (propertytype.invalid && propertytype.touched)">
 
@@ -152,7 +152,7 @@
     <div class="form-group">
 
       <input type="text" #superarea="ngModel" required [class.is-invalid]="superarea.invalid && superarea.touched"
-        class="form-control" name="superarea" [(ngModel)]="property.superarea" placeholder="Super Area">
+        class="form-control" name="superarea" ngModel placeholder="Super Area">
 
       <div *ngIf="superarea.errors && (superarea.invalid && superarea.touched)">
 

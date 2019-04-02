@@ -9,10 +9,11 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  public user = [];
+  public user =[];
   show = false;
   type = "password";
   flag = true;
+  public newuser = {};
 
 
   constructor(private autheticationservice: AutheticationService) { }
