@@ -10,13 +10,8 @@ import { AutheticationService } from '../authetication.service';
 export class CartComponent implements OnInit {
   product: any;
   public property:any;
-
   disableButton;
-
-
-
-
-  constructor(private datafetch:AutheticationService, private router:Router, private jsonService : AutheticationService) {
+constructor(private datafetch:AutheticationService, private router:Router, private jsonService : AutheticationService) {
     const url=window.location;
     const word=url.toString().split('/');
     const id=word[word.length-1];
@@ -25,22 +20,14 @@ export class CartComponent implements OnInit {
       console.log(this.property);
       this.product = this.jsonService.getpropertydetailsbyid(id,this.property);
      
-      
-    });
-     
-  
- 
+       });
+     }
 
-   }
-
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
   onBuy(){
     window.alert("Property Purchased");
    
       this.disableButton = true;
-      
-  }
+      }
 
 }

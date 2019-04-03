@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AutheticationService } from '../authetication.service';
 import { Router } from '@angular/router';
+import { JsonService } from '../json.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-body',
@@ -9,25 +12,33 @@ import { Router } from '@angular/router';
 })
 export class BodyComponent implements OnInit {
 
-
   public propertylist;
- constructor(private _jsonservice:AutheticationService,private router:Router) { 
-   this._jsonservice.changeData.subscribe(data => {
-   this.propertylist = data;
-   console.log(data);
-  });}
-  navigate(){
+  constructor(private auth: AutheticationService, private jsonService: JsonService, private router: Router) {
+    this.auth.changeData.subscribe(data => {
+      this.propertylist = data;
+      console.log(data);
+    });
+  }
+  navigate() {
     this.router.navigate(['cart']);
   }
 
-  ngOnInit(){
-    this._jsonservice.getproperty().subscribe(data=>{
-      this.propertylist= Object.keys(data).map((x)=>{return data[x]});
+  getData() {
+    this.auth.getproperty().subscribe(data => {
+      this.propertylist = Object.keys(data).map((x) => { return data[x] });
       console.log(this.propertylist);
-      
-      
     });
-   
-    
+  }
+
+  ngOnInit() {
+    this.getData()
+  }
+  likedproperty(i, islike) {
+    console.log(i);
+
+      this.jsonService.update(i, { isliked: !islike }).subscribe(res => {
+        console.log(res);
+      })
+
   }
 }
