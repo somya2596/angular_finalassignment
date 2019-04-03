@@ -9,10 +9,11 @@
         FirstName:
       </label> -->
       <input type="text" required [class.is-invalid]="fname.invalid && fname.touched" class="form-control" name="fname "
-        #fname="ngModel" ngModel placeholder="First Name">
+        #fname="ngModel" pattern="^[^\s]+([a-zA-Z]+[^\s]+)*$" ngModel placeholder="First Name">
       <div *ngIf="fname.errors && (fname.invalid && fname.touched)">
 
         <small class="text-danger" *ngIf="fname.errors.required">First Name is required</small>
+        <small class="text-danger" *ngIf="fname.errors.pattern">No Whitespaces are allowed in the First Name</small>
       </div>
     </div>
     <div class="form-group">
@@ -20,10 +21,11 @@
         LastName:
       </label> -->
       <input type="text" required [class.is-invalid]="lname.invalid && lname.touched" class="form-control" name="lname "
-        #lname="ngModel" ngModel placeholder="Last Name">
+        #lname="ngModel" pattern="^[^\s]+([a-zA-Z]+[^\s]+)*$" ngModel placeholder="Last Name">
         <div *ngIf="lname.errors && (lname.invalid && lname.touched)">
 
           <small class="text-danger" *ngIf="lname.errors.required">Last Name is required</small>
+          <small class="text-danger" *ngIf="fname.errors.pattern">No Whitespaces are allowed in the First Name</small>
         </div>
     </div>
     <div class="form-group">

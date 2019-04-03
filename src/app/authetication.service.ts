@@ -14,26 +14,26 @@ export class AutheticationService {
   public filteredJsonData: any;
   public changeData: Subject<any> = new Subject<any>();
 
-  private _url: string = "https://detailform-6dced.firebaseio.com/detailForm.json";
+  // private _url: string = "https://detailform-6dced.firebaseio.com/detailForm.json";
 
-  private listurl = "https://fir-project-97abf.firebaseio.com/.json";
+  private listurl = "https://practice-5e705.firebaseio.com/.json";
 
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<Users[]> {
+  // getUsers(): Observable<Users[]> {
 
-    return this.http.get<Users[]>(this._url);
-  }
-  setUser(userdata): Observable<Users[]> {
-    console.log(userdata);
-    return this.http.post<Users[]>(this._url, userdata);
-  }
+  //   return this.http.get<Users[]>(this._url);
+  // }
+  // setUser(userdata): Observable<Users[]> {
+  //   console.log(userdata);
+  //   return this.http.post<Users[]>(this._url, userdata);
+  // }
 
-  logout(): void {
-    localStorage.setItem('isLoggedIn', "false");
-    localStorage.removeItem('token');
-  }
+  // logout(): void {
+  //   localStorage.setItem('isLoggedIn', "false");
+  //   localStorage.removeItem('token');
+  // }
 
 
 
