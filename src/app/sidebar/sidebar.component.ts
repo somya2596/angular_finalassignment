@@ -23,15 +23,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     
    }
-  myFunction1() {
-    document.getElementById("myDropdown1").classList.toggle("show");
-  }
-  myFunction2() {
-    document.getElementById("myDropdown2").classList.toggle("show");
-  }
-  myFunction3() {
-    document.getElementById("myDropdown3").classList.toggle("show");
-  }
+
 
   
   filterr(key,val){

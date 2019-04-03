@@ -10,7 +10,11 @@
           "/index.html",
           "/*.css",
           "/*.js"
-        ]
+        ],
+        "urls":[
+          "https://fir-project-97abf.firebaseio.com/.json",
+          "https://detailform-6dced.firebaseio.com/detailForm.json"
+          ]
       }
     }, {
       "name": "assets",
@@ -21,6 +25,18 @@
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
+      } 
+    }
+  ],
+  "dataGroups":[
+    {
+      "name": "url",
+      "urls":[
+        "https://fir-project-97abf.firebaseio.com/.json",
+        "https://detailform-6dced.firebaseio.com/detailForm.json"
+      ],
+      "cacheConfig":{
+        "strategy": "freshness"
       }
     }
   ]
