@@ -9,6 +9,7 @@ import { CartComponent } from './cart/cart.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SellComponent } from './sell/sell.component';
+import { FavouriteComponent } from './favourite/favourite.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'cart/:id', component: CartComponent},
   {path: 'cart', component: CartComponent},
   {path: 'body',  component: BodyComponent},
-  { path: 'sell', component: SellComponent }
+  { path: 'sell', component: SellComponent },
+  { path: 'favourite', component: FavouriteComponent }
 
 ];
 

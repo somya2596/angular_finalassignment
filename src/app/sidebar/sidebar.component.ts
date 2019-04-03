@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Event } from '@angular/router';
+import {JsonService} from '../json.service'
+
 import { AutheticationService } from '../authetication.service';
 @Component({
   selector: 'app-sidebar',
@@ -23,7 +26,6 @@ export class SidebarComponent implements OnInit {
   myFunction1() {
     document.getElementById("myDropdown1").classList.toggle("show");
   }
-  
   myFunction2() {
     document.getElementById("myDropdown2").classList.toggle("show");
   }
@@ -44,4 +46,3 @@ export class SidebarComponent implements OnInit {
   }
 
 }
-

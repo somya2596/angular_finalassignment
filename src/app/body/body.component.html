@@ -1,6 +1,6 @@
 <div class="bodyy col-sm-9">
   <h2>Property Listing</h2>
-  <div *ngFor="let product of propertylist" class="col-sm-6 col-md-4">
+  <div *ngFor="let product of propertylist;let i = index" class="col-sm-6 col-md-4">
     <div><img [src]="product.imageurl" class="img" /><br>
       <h3>{{product.BuildingName}}</h3>
       <ul>
@@ -23,7 +23,7 @@
             DETAILS</button>
         </span>
         <span>
-          <button class="btnheart btn btn-default" type="submit">
+          <button class="btnheart btn btn-default" type="submit"(click)="likedproperty(i)">
             <i class="abc glyphicon glyphicon-heart"></i>
           </button>
         </span>

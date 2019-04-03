@@ -5,35 +5,29 @@ import { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { Property } from './property';
 
+
+
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class AutheticationService {
 
+
   public data: any;
   public filteredJsonData: any;
   public changeData: Subject<any> = new Subject<any>();
-
-  private _url: string = "https://detailform-6dced.firebaseio.com/detailForm.json";
-
-  private listurl = "https://fir-project-97abf.firebaseio.com/.json";
+  
+listurl="https://listingdata-4ad0a.firebaseio.com/.json";
 
 
-  constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<Users[]> {
-
-    return this.http.get<Users[]>(this._url);
+  constructor(private http: HttpClient) { 
+  
   }
-  setUser(userdata): Observable<Users[]> {
-    console.log(userdata);
-    return this.http.post<Users[]>(this._url, userdata);
-  }
-
-  logout(): void {
-    localStorage.setItem('isLoggedIn', "false");
-    localStorage.removeItem('token');
-  }
+  
+  
 
 
 

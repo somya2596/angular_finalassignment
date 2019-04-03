@@ -15,11 +15,13 @@
       </div>
       <div class="form-group">
         <label>
-          Password:
+          Password 
         </label>
-        <input type="{{type}}" #pass="ngModel" pattern="^([a-zA-Z0-9@*#]{8,15})$" required [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" ngModel placeholder="Password">
-        <span class="pwd glyphicon glyphicon-eye-open" (click)="showPass()"></span>
-        <div *ngIf="pass.errors && (pass.invalid && pass.touched)">
+        <input type="{{type}}" #pass="ngModel" pattern="^([a-zA-Z0-9@*#]{8,15})$" required
+        [class.is-invalid]="pass.invalid && pass.touched" class="form-control" name="password" ngModel
+        placeholder="Password">
+      <span class="pwd glyphicon glyphicon-eye-open" (click)="showPass()"></span>
+      <div *ngIf="pass.errors && (pass.invalid && pass.touched)">
        
           <small class="text-danger" *ngIf="pass.errors.required">Password is required</small>
           <!-- <small class="text-danger" *ngIf="pass.errors.pattern">check Password syntax</small> -->

@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { AutheticationService } from '../authetication.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
+
+
+import {AuthService } from '../auth.service';
+
 
 
 @Component({
@@ -18,39 +21,28 @@ export class LoginComponent implements OnInit {
   type = "password";
   public warn : String;
   
-  constructor(private autheticationservice: AutheticationService, private router: Router) { }
+  constructor( private router: Router,private authService:AuthService) { }
 
-  ngOnInit() {
-    this.autheticationservice.getUsers().subscribe((data) => {
-      Object.keys(data).forEach((key) => {
-        this.user.push(data[key])
-      });
-    });
-
-    this.autheticationservice.logout();
-    
-    
-  }
+  ngOnInit() {}    
+  
 
   onSubmit(loginform: NgForm) {
-    this.user.forEach((key) => {
-     if(loginform.value.username===key.username && loginform.value.password===atob(key.password))
-     {
-       console.warn("Login Success");
-       
-       localStorage.setItem('isLoggedIn', "true");
-       localStorage.setItem('token', loginform.value.username);
-       
-       this.router.navigate(['/dashboard'])
-     }
-     else{
-       this.warn = "Incorrect Username or Password";
-       
-     }
-     
-    });
-
-
+  
+    this.authService.login(loginform.value.username, loginform.value.password).subscribe(res=>
+      {
+        if(res.success){ 
+          localStorage.setItem('isLoggedIn','true');
+          (this.router.navigate(['dashboard'])) }
+        else{ alert(res.error);
+        }
+      });
+    loginform.value.username = loginform.value.password = '';  
+  
+  }
+  logout()
+  {
+    this.authService.logout();
+    this.router.navigate(['login']);
   }
   
   showPass()
