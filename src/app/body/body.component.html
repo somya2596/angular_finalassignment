@@ -23,10 +23,10 @@
             DETAILS</button>
         </span>
         <span>
-          <button class="btnheart btn btn-default" type="submit"(click)="likedproperty(i)">
-            <i class="abc glyphicon glyphicon-heart"></i>
-            
-          </button>
+         
+           <a (click)="likedproperty(i,product.isliked)">
+             <i class="fa fa-heart" [ngClass]="{'active': product.isliked}"></i>
+           </a>
         </span>
       </div>
     </div>

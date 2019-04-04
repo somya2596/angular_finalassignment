@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AutheticationService } from '../authetication.service';
+import { JsonService } from '../json.service';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +11,7 @@ export class CartComponent implements OnInit {
   product: any;
   public property:any;
   disableButton;
-constructor(private datafetch:AutheticationService, private router:Router, private jsonService : AutheticationService) {
+constructor( private router:Router, private jsonService : JsonService) {
     const url=window.location;
     const word=url.toString().split('/');
     const id=word[word.length-1];

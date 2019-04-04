@@ -42,6 +42,9 @@ export class SellComponent implements OnInit {
     })
     
   }
+  alert("Property Uploaded Successfully");
+  sellform.resetForm();
+  
 }
 
 }

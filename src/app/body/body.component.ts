@@ -13,8 +13,9 @@ import { Observable } from 'rxjs';
 export class BodyComponent implements OnInit {
 
   public propertylist;
-  constructor(private auth: AutheticationService, private jsonService: JsonService, private router: Router) {
-    this.auth.changeData.subscribe(data => {
+  public isActive;
+  constructor( private jsonService: JsonService, private router: Router) {
+    this.jsonService.changeData.subscribe(data => {
       this.propertylist = data;
       console.log(data);
     });
@@ -24,7 +25,7 @@ export class BodyComponent implements OnInit {
   }
 
   getData() {
-    this.auth.getproperty().subscribe(data => {
+    this.jsonService.getproperty().subscribe(data => {
       this.propertylist = Object.keys(data).map((x) => { return data[x] });
       console.log(this.propertylist);
     });
@@ -34,11 +35,10 @@ export class BodyComponent implements OnInit {
     this.getData()
   }
   likedproperty(i, islike) {
-    console.log(i);
-
-      this.jsonService.update(i, { isliked: !islike }).subscribe(res => {
+    console.log(i,islike);
+    this.jsonService.update(i, { isliked: !islike }).subscribe(res => {
         console.log(res);
+        this.getData()
       })
-
-  }
+}
 }
