@@ -12,8 +12,7 @@
           "/*.js"
         ],
         "urls":[
-          "https://fir-project-97abf.firebaseio.com/.json",
-          "https://detailform-6dced.firebaseio.com/detailForm.json"
+          "https://fir-project-97abf.firebaseio.com/.json"
           ]
       }
     }, {
@@ -32,8 +31,7 @@
     {
       "name": "url",
       "urls":[
-        "https://fir-project-97abf.firebaseio.com/.json",
-        "https://detailform-6dced.firebaseio.com/detailForm.json"
+        "https://fir-project-97abf.firebaseio.com/.json"
       ],
       "cacheConfig":{
         "strategy": "freshness"

@@ -34,8 +34,7 @@ export class BodyComponent implements OnInit {
   ngOnInit() {
     this.getData()
   }
-  likedproperty(i, islike) {
-    console.log(i,islike);
+  likedproperty(i,islike) {
     this.jsonService.update(i, { isliked: !islike }).subscribe(res => {
         console.log(res);
         this.getData()

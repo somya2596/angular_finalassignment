@@ -23,9 +23,11 @@
             DETAILS</button>
         </span>
         <span>
-         
-           <a (click)="likedproperty(i,product.isliked)">
-             <i class="fa fa-heart" [ngClass]="{'active': product.isliked}"></i>
+          
+           <!-- <a (click)="likedproperty(i,product.isliked)"> -->
+              <a (click)="likedproperty(i)">
+             <!-- <i class="fa fa-heart" [ngClass]="{'active': product.isliked}"></i> -->
+             <i class="fa fa-heart"></i>
            </a>
         </span>
       </div>
